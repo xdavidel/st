@@ -799,7 +799,6 @@ xloadcols(void)
 	dc.col[defaultbg].color.blue = ((unsigned short)(dc.col[defaultbg].color.blue * alpha)) & 0xff00;
 	dc.col[defaultbg].pixel &= 0x00FFFFFF;
 	dc.col[defaultbg].pixel |= (unsigned char)(0xff * alpha) << 24;
-
 	loaded = 1;
 }
 
@@ -1544,11 +1543,7 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
 	XftDrawSetClipRectangles(xw.draw, winx, winy, &r, 1);
 
 	/* Render the glyphs. */
-	FcBool b = FcFalse;
-	FcPatternGetBool(specs->font->pattern, FC_COLOR, 0, &b);
-	if (!b) {
-		XftDrawGlyphFontSpec(xw.draw, fg, specs, len);
-	}
+	XftDrawGlyphFontSpec(xw.draw, fg, specs, len);
 
 	/* Render underline and strikethrough. */
 	if (base.mode & ATTR_UNDERLINE) {
