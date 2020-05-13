@@ -1,5 +1,6 @@
 st
-st.o
+*.o
+*.diff
 x.o
 pkg/
 *.pkg.tar.xz
