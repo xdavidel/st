@@ -215,7 +215,8 @@ static MouseShortcut mshortcuts[] = {
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
-#define TERMMOD (Mod1Mask|ControlMask)
+#define ALTKEY Mod1Mask
+#define TERMMOD (ControlMask|ShiftMask)
 
 MouseKey mkeys[] = {
 	/* button               mask            function        argument */
@@ -223,8 +224,8 @@ MouseKey mkeys[] = {
 	{ Button5,              XK_NO_MOD,      kscrolldown,    {.i =  5} },
 	{ Button4,              ShiftMask,      kscrollup,      {.i =  20} },
 	{ Button5,              ShiftMask,      kscrolldown,    {.i =  20} },
-	{ Button4,              MODKEY,         kscrollup,      {.i =  1} },
-	{ Button5,              MODKEY,         kscrolldown,    {.i =  1} },
+	{ Button4,              ALTKEY,         kscrollup,      {.i =  1} },
+	{ Button5,              ALTKEY,         kscrolldown,    {.i =  1} },
 	{ Button4,              ControlMask,    zoom,           {.f =  +1} },
 	{ Button5,              ControlMask,    zoom,           {.f =  -1} },
 	{ Button3,              XK_NO_MOD,      clippaste,      {.f =  -1} },
@@ -246,34 +247,30 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ MODKEY,               XK_Home,        zoomreset,      {.f =  0} },
+	{ ALTKEY,               XK_Home,        zoomreset,      {.f =  0} },
 	{ ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
-	{ MODKEY,               XK_c,           clipcopy,       {.i =  0} },
-	{ MODKEY,               XK_v,           clippaste,      {.i =  0} },
-	{ MODKEY,               XK_p,           selpaste,       {.i =  0} },
-	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
-	{ MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
+	{ TERMMOD,              XK_c,           clipcopy,       {.i =  0} },
+	{ TERMMOD,              XK_v,           clippaste,      {.i =  0} },
+	{ ALTKEY,               XK_c,           clipcopy,       {.i =  0} },
+	{ ALTKEY,               XK_v,           clippaste,      {.i =  0} },
+	{ ALTKEY,               XK_p,           selpaste,       {.i =  0} },
+	{ ALTKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
+	{ ALTKEY,               XK_Control_L,   iso14755,       {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ MODKEY,               XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ MODKEY,               XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ MODKEY,               XK_k,           kscrollup,      {.i =  1} },
-	{ MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
+	{ ALTKEY,               XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ ALTKEY,               XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ ALTKEY,               XK_k,           kscrollup,      {.i =  1} },
+	{ ALTKEY,               XK_j,           kscrolldown,    {.i =  1} },
 	{ TERMMOD,              XK_Up,          kscrollup,      {.i =  1} },
 	{ TERMMOD,              XK_Down,        kscrolldown,    {.i =  1} },
-	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
-	{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
-	{ MODKEY,               XK_Up,          zoom,           {.f = +1} },
-	{ MODKEY,               XK_Down,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_K,           zoom,           {.f = +1} },
-	{ TERMMOD,              XK_J,           zoom,           {.f = -1} },
-	{ TERMMOD,              XK_U,           zoom,           {.f = +2} },
-	{ TERMMOD,              XK_D,           zoom,           {.f = -2} },
-	{ MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
-	{ MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-	{ MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
+	{ ALTKEY,               XK_u,           kscrollup,      {.i = -1} },
+	{ ALTKEY,               XK_d,           kscrolldown,    {.i = -1} },
+	{ ALTKEY,               XK_Up,          zoom,           {.f = +1} },
+	{ ALTKEY,               XK_Down,        zoom,           {.f = -1} },
+	{ ALTKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
+	{ ALTKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
+	{ ALTKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
 };
 
 /*
