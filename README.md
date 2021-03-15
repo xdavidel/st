@@ -10,9 +10,8 @@ The [suckless terminal (st)](https://st.suckless.org/) with some additional feat
 
 ## Bindings for
 
-+ **scrollback** with `alt-↑/↓` or `alt-pageup/down` or `shift` while scrolling the mouse
-+ OR **vim-bindings**: scroll up/down in history with `alt-k` and `alt-j`. Faster with `alt-u`/`alt-d`.
-+ **zoom/change font size**: same bindings as above, but holding down shift as well. `alt-home` returns to default
++ **scroll** up/down in history with `alt-k` and `alt-j`. Faster with `alt-u`/`alt-d`.
++ **zoom/change font size**: with `ctrl-=` and `ctrl--`.
 + **copy text** with `alt-c`, **paste** is `alt-v` or `shift-insert`
 
 ## Pretty stuff
@@ -27,6 +26,7 @@ The [suckless terminal (st)](https://st.suckless.org/) with some additional feat
 + Vertcenter
 + Scrollback
 + updated to latest version 0.8.2
++ font ligatures
 
 ## Installation for newbs
 
